@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2e6e6;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: #ff6666;
+            margin: 0 auto 20px;
+            transform: rotate(-45deg);
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #ff6666;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: #ff6666;
+            margin: 0;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 10px 0 20px;
+        }
+        .signature {
+            font-style: italic;
+            color: #888;
+            margin-top: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #444;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-yes {
+            background-color: #ff6666;
+        }
+        .button-no {
+            background-color: #888;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="question-section">
+            <p class="question">Are you the wife of Gian Paul A. Bolaon? Are you his baby?</p>
+            <div class="buttons">
+                <button class="button button-yes" onclick="showLoveLetter()">Yes</button>
+                <button class="button button-no" onclick="showSadLetter()">No</button>
+            </div>
+        </div>
+        
+        <div id="love-letter" class="hidden">
+            <div class="heart"></div>
+            <h1>My Dearest Love,</h1>
+            <p>
+                Happy 14th Monthsary, Mami! Thank you so much for being there through the good and the bad. I’m endlessly grateful for the love you've given me, even with my mistakes along the way. I promise to keep growing and be better every step of the way. I love you more than words can say, and I hope you always take care of yourself, eat well, and stay hydrated too.
+            </p>
+            <p>
+                God bless you always! I’m here to support you, your teammate through everything. Don't ever feel shy about opening up to me because I’ll always be here, cheering you on. Let’s keep holding on, proving to everyone that forever really does exist! AHSASAHASAHSH 😂
+            </p>
+            <div class="signature">Forever yours, <br> [Gian]</div>
+        </div>
+
+        <div id="sad-letter" class="hidden">
+            <h1>I'm Sad 😭</h1>
+            <p>
+                Hmph! How could you not be my asawa? 😭😭😭 I thought mag-asawa tayo, you broke my heart! 😭
+            </p>
+            <p>
+                But I’ll still be here, jinojoke mo lang naman ako, you’re mine though, ble.
+            </p>
+            <div class="signature">Your forever hopeful, <br> [Gian]</div>
+        </div>
+    </div>
+
+    <script>
+        function showLoveLetter() {
+            document.getElementById('question-section').classList.add('hidden');
+            document.getElementById('love-letter').classList.remove('hidden');
+        }
+        
+        function showSadLetter() {
+            document.getElementById('question-section').classList.add('hidden');
+            document.getElementById('sad-letter').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
